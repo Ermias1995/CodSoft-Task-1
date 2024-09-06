@@ -60,7 +60,13 @@ body{
     visibility: visible; 
     margin-right: 5px;
 }
-
+.navbar #logo{
+    font-size: 2.5rem;
+    background: linear-gradient(green,yellow,red);
+    color: white;
+    border-radius: 50%;
+    align-items: left;
+}
 img {
     width: 100%;
     height: 100%;
@@ -84,8 +90,7 @@ img {
 }
 .photo-1:hover,.photo-2:hover,.photo-3:hover{
     width: 70%;
-    /* border-radius: 1rem;
-    box-shadow: 10px 10px 90px #f8a03c;  */
+    transition: 400ms;
 }
 .discreption{
     display: flex;
@@ -120,13 +125,41 @@ img {
 .discreption button:hover{
     background-color: var(--grey-600);
 }
+.discreption a{
+    text-decoration: none;
+    color: #f8a03c;
+}
 
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content:space-around;
     align-items: center;
     height: 5rem;
-    background-color: yellow;
+    color: var(--grey-50);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+ul{
+    list-style:none;
+    display: flex;
+    gap: 15px;
 }
 
+li a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1px rgb(248, 143, 45);
+    color: var(--grey-50);
+    padding: 0.7rem;
+}
+li a:hover{
+    font-size: larger;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
